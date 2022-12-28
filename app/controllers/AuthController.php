@@ -6,6 +6,7 @@ use App\Helpers\Request;
 use App\Helpers\Response;
 use App\Helpers\Session;
 use App\Helpers\Redirect;
+use App\Helpers\Cookie;
 use App\Models\UserModel;
 use App\Models\AuthModel;
 
@@ -28,11 +29,8 @@ class AuthController {
         echo render('auth/login', $data);
     }
 
-    
-
-
-    public function logind() {
-        
+    //
+    public function loginPost() {
         // Procesar la solicitud de inicio de sesión
         $username = $this->request->post('username');
         $email = $this->request->post('email');
@@ -44,7 +42,9 @@ class AuthController {
 
         if ($user) {
             // Si son válidos, iniciar sesión y redirigir al usuario a la página principal
-            $this->session->set('user', $user);
+            //$this->session->set('user', $user);
+            $this->session->start();
+            
             Redirect::to('/');
         } else {
             // Si no son válidos, mostrar un mensaje de error y volver al formulario de inicio de sesión

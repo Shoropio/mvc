@@ -26,9 +26,9 @@
 ?>
                        <?php 
 
-                       var_dump($_SESSION);
+                       //var_dump($_SESSION);
 
-                       var_dump($_SESSION['user']); ?>
+                       //var_dump($_SESSION['user']); ?>
                         <div class="card-body">
                             <form action="<?= $response->getUrl('login-post') ?>" method="post">
                                 <div class="form-group">

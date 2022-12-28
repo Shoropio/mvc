@@ -74,7 +74,7 @@ $router->addRoute('GET', '/usuarios/([0-9]+)', function($id) {
 $router->addRoute('POST', '/login-post', function() {
   // código para mostrar el detalle de un usuario con el ID especificado
     $controller = new App\Controllers\AuthController();
-    $controller->logind();
+    $controller->loginPost();
 });
 
 $router->addRoute('POST', '/usuarios', function() {

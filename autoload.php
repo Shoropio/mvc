@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+//session_start();
 
 // definir la constante ROOT_PATH
 //define('ROOT_PATH', realpath(__DIR__) . '/');
